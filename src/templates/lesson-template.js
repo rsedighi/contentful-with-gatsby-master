@@ -21,8 +21,8 @@ export const query = graphql`
 const LessonTemplate = ({ data: { blog } }) => (
   <div>
     <h1>{blog.title}</h1> by {blog.author.name}
-    {blog.body.body}
     <div>
+    {blog.body.body}
     </div>
   </div>
 )
