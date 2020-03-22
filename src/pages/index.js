@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-
+import '../style.css'
 export const query = graphql`
   {
     blogs: allContentfulBlogPost {

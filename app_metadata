@@ -1,0 +1,7 @@
+{
+  "app_metadata": {
+    "authorization": {
+      "roles": ["admin", "editor"]
+    }
+  }
+}
