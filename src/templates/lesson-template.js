@@ -14,11 +14,7 @@ export const query = graphql`
 const LessonTemplate = ({ data: { blog } }) => (
   <div>
     <h1>{blog.title}</h1>
-    <p>
-      Guest: {blog.author.name} · <a href={blog.author.twitter}>Twitter</a>
-    </p>
-    <div>
-    </div>
+    
   </div>
 )
 
