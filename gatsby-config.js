@@ -17,5 +17,6 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_API_TOKEN,
       },
     },
+    "gatsby-transformer-remark",
   ],
 }

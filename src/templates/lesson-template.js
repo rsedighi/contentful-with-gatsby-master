@@ -12,7 +12,10 @@ export const query = graphql`
         twitter
       }
       body {
-        body
+        childMarkdownRemark
+        {
+          html
+        }
       }
     }
   }
@@ -20,10 +23,9 @@ export const query = graphql`
 
 const LessonTemplate = ({ data: { blog } }) => (
   <div>
-    <h1>{blog.title}</h1> by {blog.author.name}
-    <div>
-    {blog.body.body}
-    </div>
+    <h1>{blog.title}</h1> <h3>Author: {blog.author.name}</h3>
+    <div dangerouslySetInnerHTML={{__html: blog.body.childMarkdownRemark.html}}/>
+
   </div>
 )
 
