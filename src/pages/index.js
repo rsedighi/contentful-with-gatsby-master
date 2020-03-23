@@ -17,7 +17,7 @@ export const query = graphql`
 
 export default ({ data }) => (
   <div>
-    <h1>Ram's Corner - Latest Posts</h1>
+    <h1>Ram's Corner</h1>
     {data.blogs.nodes.map(blog => (
       <div key={`blog-${blog.slug}`}>
         <h2>
