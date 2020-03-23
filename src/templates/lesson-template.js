@@ -7,6 +7,7 @@ export const query = graphql`
   query($slug: String!) {
     blog: contentfulBlogPost(slug: { eq: $slug }) {
       title
+      createdAt
       author {
         name
         twitter
@@ -23,7 +24,7 @@ export const query = graphql`
 
 const LessonTemplate = ({ data: { blog } }) => (
   <div>
-    <h1>{blog.title}</h1> <h3>Author: {blog.author.name}</h3>
+    <h1>{blog.title}</h1> <h3>Author: {blog.author.name}</h3> 
     <div dangerouslySetInnerHTML={{__html: blog.body.childMarkdownRemark.html}}/>
 
   </div>
